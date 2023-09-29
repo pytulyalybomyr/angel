@@ -1,6 +1,8 @@
 // Отримуємо параметр search з URL
-const urlParams = new URLSearchParams(window.location.search);
-const searchText = urlParams.get('search');
+// const urlParams = new URLSearchParams(window.location.search);
+// const searchText = urlParams.get('search');
+
+const searchText = localStorage.getItem('searchText');
 
 
 function kosmatuka() {
@@ -141,26 +143,6 @@ function displayAllProducts() {
 // Викликаємо функцію для відображення всіх товарів
 displayAllProducts();
 
-// Функція для відображення карточок товарів з урахуванням параметрів пошуку
-// function displayProducts(searchText) {
-//     const searchResults = document.getElementById('searchResults');
-//     searchResults.innerHTML = '';
-
-//     const filteredProducts = products.filter(product => {
-//         return product.tags.toLowerCase().includes(searchText.toLowerCase());
-//     });
-
-//     if (filteredProducts.length === 0) {
-//         searchResults.innerText = 'Нічого не знайдено.';
-//     } else {
-//         filteredProducts.forEach(product => {
-//             const productCard = createProductCard(product);
-//             searchResults.appendChild(productCard);
-//         });
-//     }
-// }
-
-// Викликаємо функцію для відображення карточок товарів з урахуванням параметрів пошуку
 
 // Фільтр по категоріях товарів
 function displayProducts(searchText) {
@@ -186,6 +168,8 @@ function displayProducts(searchText) {
 
 if (searchText) {
     displayProducts(searchText);
+
+    localStorage.removeItem('searchText');
 }
 
 
@@ -196,16 +180,37 @@ function displayFilterProducts() {
     const selectedCategory = categoryFilter.value;
     document.getElementById('productList').style.display = "block";
     searchResults.innerHTML = ``;
+    document.getElementById("activefilter_h2").innerHTML = '';
 
     const filteredProducts = products.filter(product => {
         // return product.category.toLowerCase() === selectedCategory.toLowerCase();
         return product.tags.toLowerCase().includes(selectedCategory.toLowerCase());
     });
 
-    if (filteredProducts.length === 0) {
-        searchResults.innerText = 'Нічого не знайдено.';
+
+
+    // if (filteredProducts.length === 0) {
+    //     searchResults.innerText = 'Нічого не знайдено.';
+    //     document.getElementById("activefilter_h2").innerHTML = 'Усі елементи';
+    //     products.forEach(product => {
+    //         const productCard = createProductCard(product);
+    //         searchResults.appendChild(productCard);
+    //     });
+    // }
+
+    // if (categoryFilter.value === '') {
+    //     document.getElementById("activefilter_h2").innerHTML = 'Немає';
+    // }
+
+    if (categoryFilter.value === 'all') {
+        document.getElementById("activefilter_h2").innerHTML = 'Усі товари';
+        products.forEach(product => {
+            const productCard = createProductCard(product);
+            searchResults.appendChild(productCard);
+        });
     } else {
         document.getElementById('productList').style.display = "none";
+        document.getElementById("activefilter_h2").innerHTML = categoryFilter.value;
         filteredProducts.forEach(product => {
             const productCard = createProductCard(product);
             searchResults.appendChild(productCard);
