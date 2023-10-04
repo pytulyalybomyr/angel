@@ -108,6 +108,8 @@
 <main>
     <h1>Каталог товарів</h1>
 
+    <div id="my-cart"></div>
+
     <label for="categoryFilter">Оберіть категорію:</label>
     <select id="categoryFilter" onchange="displayFilterProducts()">
         <option value="all">Усі товари</option>
@@ -121,6 +123,10 @@
     <div class="activefilter">
         <h2>Активний фільтр: </h2>
         <h3 id="activefilter_h2" class="activefilter_h2">Немає</h3>
+    </div>
+    <div class="search">
+        <h2>Пошук: </h2>
+        <h3 id="search_h2" class="search">Немає</h3>
     </div>
     <div id="productList"></div>
     <div class="items">
