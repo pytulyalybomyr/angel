@@ -16,6 +16,34 @@ var swiper = new Swiper(".swiper", {
     },
 });
 
+var news = new Swiper("#news", {
+    slidesPerView: 4,
+    direction: "horizontal",
+    autoplay: false,
+    pagination: {
+        el: ".swiper-pagination ",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+var review = new Swiper("#review", {
+    slidesPerView: 2,
+    direction: "horizontal",
+    autoplay: false,
+    pagination: {
+        el: ".swiper-pagination ",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 
 // if (
 //     window.matchMedia("(min-device-width: 320px) and (max-device-width: 480px)")
