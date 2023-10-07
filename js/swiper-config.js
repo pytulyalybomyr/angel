@@ -46,52 +46,6 @@ if (window.matchMedia("(min-device-width: 320px) and (max-device-width: 500px)")
         },
     });
 
-}
-if (window.matchMedia("(min-device-width: 500px) and (max-device-width: 900px)").matches) {
-
-    var swiper = new Swiper(".swiper", {
-        slidesPerView: 3,
-        spaceBetween: 18,
-        direction: "horizontal",
-        autoplay: false,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    var news = new Swiper("#news", {
-        slidesPerView: 2,
-        direction: "horizontal",
-        autoplay: false,
-        pagination: {
-            el: ".swiper-pagination ",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    var review = new Swiper("#review", {
-        slidesPerView: 1,
-        direction: "horizontal",
-        autoplay: false,
-        pagination: {
-            el: ".swiper-pagination ",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
 } else {
 
     var news = new Swiper("#news", {
@@ -121,6 +75,38 @@ if (window.matchMedia("(min-device-width: 500px) and (max-device-width: 900px)")
             prevEl: '.swiper-button-prev',
         },
     });
+}
+
+if (window.matchMedia("(min-device-width: 501px) and (max-device-width: 900px)").matches) {
+
+    var news = new Swiper("#news", {
+        slidesPerView: 2,
+        direction: "horizontal",
+        autoplay: false,
+        pagination: {
+            el: ".swiper-pagination ",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    var review = new Swiper("#review", {
+        slidesPerView: 2,
+        direction: "horizontal",
+        autoplay: false,
+        pagination: {
+            el: ".swiper-pagination ",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 }
 
 
