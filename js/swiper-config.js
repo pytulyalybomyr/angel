@@ -110,6 +110,23 @@ if (window.matchMedia("(min-device-width: 501px) and (max-device-width: 900px)")
 }
 
 
+if (window.matchMedia("(min-device-width: 800px) and (max-device-width: 1000px)").matches) {
+
+    var news = new Swiper("#news", {
+        slidesPerView: 3,
+        direction: "horizontal",
+        autoplay: false,
+        pagination: {
+            el: ".swiper-pagination ",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+
 // if (
 //     window.matchMedia("(min-device-width: 320px) and (max-device-width: 480px)")
 //     .matches
