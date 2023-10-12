@@ -213,7 +213,7 @@ function createProductCard(product) {
                         <img src="./img/case.webp" alt="">
                         <div class="card__block-img_circles">
                             <div class="card__block-img_circle">
-                                <button class="open" data-art="${product.name}">
+                                <button style="display: flex;align-items: center;justify-content: center;gap: 5px;" class="open" data-art="${product.name}">
                                     <h1>Перегляд</h1>
                                     <img src="./img/lope.svg" alt="">
                                 </button>
