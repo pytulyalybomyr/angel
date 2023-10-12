@@ -99,7 +99,7 @@
                                 </ul>
                                 <div class="header__nav-input">
                                     <form action="">
-                                        <input type="text" class="search" placeholder='"Сукня"'>
+                                        <input type="text" class="search" placeholder='"Одяг"'>
                                         <button type="button" id="main-button__header"
                                             class="main-button__header header__input-submit">
                                             <h2>Пошук</h2>
@@ -129,7 +129,7 @@
                 </ul>
                 <div class="header__nav-input">
                     <form action="">
-                        <input type="text" class="search2_0" id placeholder='"Сукня"'>
+                        <input type="text" class="search2_0" id placeholder='"Одяг"'>
                         <button type="button" id="main-button__header2_0"
                             class="main-button__header header__input-submit">
                             <!-- <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -401,9 +401,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -441,9 +441,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -480,9 +480,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -519,9 +519,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -555,9 +555,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -595,9 +595,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -634,9 +634,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -673,9 +673,9 @@
                                             </button>
                                         </div>
                                         <div class="card__block-img_circle">
-                                            <a href title="Переглянути">
+                                            <button onclick="openProductPopup" title="Переглянути">
                                                 <img src="./img/lope.svg" alt="">
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="card__block-img_circle">
                                             <a href title="Додати в уподобане">
@@ -794,6 +794,8 @@
         </div>
 
     </content>
+
+    <div id="popup-overview" class="popup-overview"></div>
 </main>
 
     <footer class="footer">
