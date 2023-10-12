@@ -148,77 +148,78 @@
     </header>
 
 <main>
-    <h1 style="text-align: center;
-    margin: 30px;
-    font-size: 30px;">Каталог товарів</h1>
 
-    <!-- <div id="my-cart"></div> -->
-
-    <div class="katalog__nav-main">
-        <label for="categoryFilter">Оберіть категорію:</label>
-        <select id="categoryFilter" onchange="displayFilterProducts(); document.querySelector('.ssdssd').click()">
-            <option value="Всі">Усі товари</option>
-            <option value="Чорний">Чорний</option>
-            <option value="Синій">Синій</option>
-            <option value="Голубий">Голубий</option>
-            <option value="Зелений">Зелений</option>
-            <option value="Білий">Білий</option>
-            <!-- Додайте інші категорії за потребою -->
-        </select>
-        <div style="display: none;" class="activefilter">
-            <h2>Активний фільтр: </h2>
-            <h3 id="activefilter_h2" class="activefilter_h2">Усі товари</h3>
+    <content class="cart">
+        <div class="cart__header">
+            <h1>Моя Корзина</h1>
         </div>
-        <div class="search">
-            <h2>Пошук: </h2>
-            <h3 id="search_h2" class="search">Немає</h3>
-        </div>
-    </div>
-
-
-    <div class="products"></div>
-    <div id="productList"></div>
-    <div class="items">
         <div class="container">
-            <div id="searchResults">
-
-            </div>
-        </div>
-    </div>
-    <div id="paginationControls" class="paginationControls pagination2"></div>
-
-    <!-- <div id="productPopup" class="popup">
-        <h2 id="popupTitle"></h2>
-        <p id="popupDescription"></p>
-        <button id="closePopup">Закрити</button>
-    </div> -->
-    <div id="popup-overview" class="popup-overview">
-        <div style="display: block;" class="popup" id="productPopup">
-            <div class="popup__nav">
-                <h1>Про товар</h1>
-                <img style="width: 35px;
-             height: 35px;" src="./img/cross.svg" alt="">
-            </div>
-            <div class="popup__main">
-                <h1 class="popup__main-title" id="popupTitle">КОМПЛЕКТ BOMBSHELL SHINE STRAP PUSH-UP</h1>
-                <div class="popup__main-block">
-                    <img src="./img/bombshell.webp" alt="">
-                    <div class="popup__main-block_text">
-                        <h3>Бренд: Victoria’s Secret</h3>
-                        <h1>1000UAN</h1>
-                        <h3 style="margin-top: 5px;">Кількість:</h3>
-                        <div class="popup__main-block_count">
-                            <button class="popup__main-block_count_minus minus" data-art="${product.name}">-</button>
-                            <h1 style="margin-top: 0;" class="item-quantity">1</h1>
-                            <button class="popup__main-block_count_plus plus" data-art="${product.name}">+</button>
-                        </div>
-                        <h3 style="margin-top: 5px;">Розмір:</h3>
-                    </div>
+            <div class="cart__main">
+                <div class="cart__nav">
+                    <ul>
+                        <li>
+                            <h2>Опис</h2>
+                        </li>
+                        <li>
+                            <h2>Розмір</h2>
+                        </li>
+                        <li>
+                            <h2>кількість</h2>
+                        </li>
+                        <li>
+                            <h2>Видалити</h2>
+                        </li>
+                        <li>
+                            <h2>Ціна</h2>
+                        </li>
+                    </ul>
                 </div>
+                <div id="my-cart">
+                    <!-- <div class="cart__blocks">
+                        <div class="cart__blocks-desk">
+                            <img src="./img/bombshell.webp" alt="">
+                            <div class="cart__blocks-desk-h1">
+                                <h1>bombshell</h1>
+                            </div>
+                        </div>
+                        <div class="cart__blocks-sizes">
+                            <h1 class="cart__blocks-size">S</h1>
+                        </div>
+                        <div class="cart__blocks-count">
+                            <button class="cart__blocks-count_minus">-</button>
+                            <h1>1</h1>
+                            <button class="cart__blocks-count_plus">+</button>
+                        </div>
+                        <div class="cart__blocks-delete">
+                            <h1 class="cart__blocks-delete">x</h1>
+                        </div>
+                        <div class="cart__blocks-price">
+                            <h1>$90</h1>
+                        </div>
+                    </div> -->
+                </div>
+
             </div>
         </div>
-    </div>
+    </content>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cart = JSON.parse(localStorage.getItem('cart'));
+
+            if (!cart || Object.keys(cart).length === 0) {
+                Swal.fire(
+                    'Увага',
+                    'Кошик порожній',
+                    'error'
+                ).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = './katalog.html';
+                    }
+                })
+            }
+        });
+    </script>
 </main>
 
     <footer class="footer">
