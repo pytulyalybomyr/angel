@@ -213,19 +213,10 @@ function createProductCard(product) {
                         <img src="./img/case.webp" alt="">
                         <div class="card__block-img_circles">
                             <div class="card__block-img_circle">
-                                <button class="cart_add" data-art="${product.name}" title="Додати в корзину">
-                                    <img src="./img/cart.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="card__block-img_circle">
                                 <button class="open" data-art="${product.name}">
+                                    <h1>Перегляд</h1>
                                     <img src="./img/lope.svg" alt="">
                                 </button>
-                            </div>
-                            <div class="card__block-img_circle">
-                                <a href title="Додати в уподобане">
-                                    <img src="./img/heart.svg" alt="">
-                                </a>
                             </div>
                         </div>
                     </div>
